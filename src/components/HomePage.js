@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import WaterWave from 'react-water-wave';
 import '../styles/HomePage.css';
 import background from '../resources/background.png'
@@ -17,8 +18,8 @@ const HomePage = () => {
             <div className="title">Boundless Collaboration</div>
             <div className="subtitle">Safely tap into distributed data with fluid AI training pools</div>
             <div className="btns">
-              <button>Join a Pool</button>
-              <button>Create a Pool</button>
+              <Link to="/Join"><button>Join a Pool</button></Link>
+              <Link to="/Create"><button>Create a Pool</button></Link>
             </div>
           </div>
       )}
