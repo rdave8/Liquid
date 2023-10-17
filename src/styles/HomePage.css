@@ -36,7 +36,7 @@
   }
   .center .btns .left-button{
     background: var(--white);
-    color: var(--lightblue);
+    color: var(--darkblue);
   }
   .center .btns .left-button:hover{
     color: var(--white);
@@ -48,5 +48,5 @@
   }
   .btns .right-button:hover{
     background: var(--white);
-    color: var(--lightblue);
+    color: var(--darkblue);
   }
