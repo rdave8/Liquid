@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
@@ -13,10 +12,10 @@ const App = () => {
     <HashRouter>
       <Navbar />
       <Routes>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/Join" component={JoinPage} />
-        <Route path="/Create" component={CreatePage} />
-        <Route path="/LearnMore" component={LearnMorePage} />
+        <Route exact path="/" element={<HomePage />} />
+        <Route exact path="/" element={<JoinPage />} />
+        <Route exact path="/" element={<CreatePage />} />
+        <Route exact path="/" element={<LearnMorePage />} />
       </Routes>
     </HashRouter>
   );
