@@ -18,8 +18,8 @@ const HomePage = () => {
             <div className="title">Boundless Collaboration</div>
             <div className="subtitle">Safely tap into distributed data with fluid AI training pools</div>
             <div className="btns">
-              <Link to="/Join"><button>Join a Pool</button></Link>
-              <Link to="/Create"><button>Create a Pool</button></Link>
+              <Link to="/Join"><button className='left-button'>Join a Pool</button></Link>
+              <Link to="/Create"><button className='right-button'> Create a Pool</button></Link>
             </div>
           </div>
       )}

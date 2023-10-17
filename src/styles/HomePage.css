@@ -34,19 +34,19 @@
     outline: none;
     transition: all 0.5s ease;
   }
-  .center .btns button:first-child{
+  .center .btns .left-button{
     background: var(--white);
     color: var(--lightblue);
   }
-  .btns button:first-child:hover{
+  .center .btns .left-button:hover{
     color: var(--white);
     background: none;
   }
-  .center .btns button:last-child{
+  .center .btns .right-button{
     color: var(--white);
     background: none;
   }
-  .btns button:last-child:hover{
+  .btns .right-button:hover{
     background: var(--white);
     color: var(--lightblue);
   }
