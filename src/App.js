@@ -1,6 +1,7 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as HashRouter, Route, Routes } from 'react-router-dom';
+import './App.css'
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import JoinPage from './components/JoinPage';
@@ -13,9 +14,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path="/" component={HomePage} />
-        <Route path="/join" component={JoinPage} />
-        <Route path="/create" component={CreatePage} />
-        <Route path="/create" component={LearnMorePage} />
+        <Route path="/Join" component={JoinPage} />
+        <Route path="/Create" component={CreatePage} />
+        <Route path="/LearnMore" component={LearnMorePage} />
       </Routes>
     </HashRouter>
   );
