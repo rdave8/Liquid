@@ -13,9 +13,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/" element={<JoinPage />} />
-        <Route exact path="/" element={<CreatePage />} />
-        <Route exact path="/" element={<LearnMorePage />} />
+        <Route exact path="/Join" element={<JoinPage />} />
+        <Route exact path="/Create" element={<CreatePage />} />
+        <Route exact path="/LearnMore" element={<LearnMorePage />} />
       </Routes>
     </HashRouter>
   );

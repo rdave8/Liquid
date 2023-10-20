@@ -1,0 +1,90 @@
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 30px;
+  }
+  
+  .form-container h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 20px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--darkblue);
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: var(--superlightblue);
+  }
+
+  .form-input:{
+    border-color: var(--darkblue);
+    background-color: var(--superlightblue);
+  }
+
+  .form-input:focus {
+    border-color: var(--darkblue);
+    background-color: var(--superlightblue);
+  }
+
+  #poolDescription {
+    max-height: 120px;
+    max-width: 100%;
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--black)
+  }
+  
+  .form-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-toggle input {
+    margin-right: 10px;
+  }
+  
+  .form-select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--darkblue);
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: var(--superlightblue);
+  }
+  
+  .form-price {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+    margin-top: 20px;
+    border-top: 2px solid var(--gray);
+    padding-top: 10px;
+  }
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 30px;
+    position: relative;
+  }  
