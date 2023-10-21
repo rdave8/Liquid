@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .bg {
     position: fixed;
@@ -25,6 +25,7 @@
     animation: bg-animation 0.8s infinite;
     opacity: 1;
     visibility: visible;
+    z-index: -999;
 }
 
 @keyframes bg-animation {
@@ -42,6 +43,6 @@
 }
 
 ::selection{
-    color: var(--blue);
-    background: var(--white);
+    color: var(--black);
+    background: var(--yellow);
 }
