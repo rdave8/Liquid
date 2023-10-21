@@ -37,6 +37,7 @@ const CreatePoolForm = ({ onFormChange }) => {
     }
 
     setPrice(totalPrice);
+    onFormChange('price', totalPrice);
   }, [isPrivate, maxContributors, differentialPrivacy, algorithm]);
 
   const handlePoolNameChange = (event) => {
@@ -104,12 +105,12 @@ const CreatePoolForm = ({ onFormChange }) => {
         onChange={handlePoolDescriptionChange}
       ></textarea>
 
-      <label htmlFor="poolType" className="form-label">Pool Type</label>
+      <label htmlFor="poolTypePublic" className="form-label">Pool Type</label>
       <div className="radio-input">
         <label>
           <input 
           className="pool-type" 
-          id="public" 
+          id="poolTypePublic" 
           type="radio" 
           checked={!isPrivate}
           value={!isPrivate}
@@ -119,8 +120,8 @@ const CreatePoolForm = ({ onFormChange }) => {
         </label>
         <label>
           <input 
-          name="pool-type" 
-          id="private" 
+          name="pool-typePrivate" 
+          id="poolType" 
           type="radio"
           checked={isPrivate}
           value={isPrivate}
@@ -128,7 +129,7 @@ const CreatePoolForm = ({ onFormChange }) => {
           />
           <span>Private</span>
         </label>
-        <span class="selection"></span>
+        <span className="selection"></span>
       </div>
 
       {!isPrivate && (
