@@ -37,8 +37,7 @@ const CreatePoolForm = ({ onFormChange }) => {
     }
 
     setPrice(totalPrice);
-    onFormChange('price', totalPrice);
-  }, [isPrivate, maxContributors, differentialPrivacy, algorithm, onFormChange]);
+  }, [isPrivate, maxContributors, differentialPrivacy, algorithm]);
 
   const handlePoolNameChange = (event) => {
     const value = event.target.value;
@@ -72,7 +71,7 @@ const CreatePoolForm = ({ onFormChange }) => {
 
   const handleDifferentialPrivacyChange = () => {
     const value = !differentialPrivacy;
-    setDifferentialPrivacy(!value);
+    setDifferentialPrivacy(value);
     onFormChange('differentialPrivacy', value);
   };
 
@@ -146,14 +145,12 @@ const CreatePoolForm = ({ onFormChange }) => {
 
       <div className="form-toggle">
         <label htmlFor="differentialPrivacy" className="form-label">Differential Privacy</label>
-        <input
-          type="checkbox"
-          id="differentialPrivacy"
-          checked={differentialPrivacy}
-          onChange={handleDifferentialPrivacyChange}
-        />
-        <label htmlFor="differentialPrivacy">{differentialPrivacy ? 'Enabled' : 'Disabled'}</label>
+        <label className="switch">
+          <input type="checkbox" id="differentialPrivacy" checked={differentialPrivacy} onChange={handleDifferentialPrivacyChange} />
+          <span className="slider"></span>
+        </label>
       </div>
+
 
       <label htmlFor="algorithm" className="form-label">Model</label>
       <select

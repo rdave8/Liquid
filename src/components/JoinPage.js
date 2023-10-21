@@ -4,7 +4,7 @@ import '../styles/JoinPage.css';
 const JoinPage = () => {
   return (
     <>
-    <div class="bg"></div>
+    <div className="bg"></div>
     </>
   );
 };

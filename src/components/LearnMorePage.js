@@ -4,7 +4,7 @@ import '../styles/LearnMorePage.css';
 const LearnMorePage = () => {
   return (
     <>
-    <div class="bg"></div>
+    <div className="bg"></div>
     </>
   );
 };
