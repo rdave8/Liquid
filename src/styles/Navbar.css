@@ -45,3 +45,20 @@ nav .menu{
 .menu ul li a.active {
     border-color: var(--yellow);
 }
+
+.menu ul li a.unconnected {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+.menu ul li a.unconnected:hover{
+    background: none;
+    color: var(--yellow);
+}
+
+.menu ul li span.connected{
+    background: none;
+    color: var(--yellow);
+    font-size: 20px;
+    font-weight: 500;
+}
