@@ -104,15 +104,31 @@ const CreatePoolForm = ({ onFormChange }) => {
         onChange={handlePoolDescriptionChange}
       ></textarea>
 
-      <div className="form-toggle">
-        <label htmlFor="isPrivate" className="form-label">Pool Type</label>
-        <input
-          type="checkbox"
-          id="isPrivate"
-          checked={isPrivate}
+      <label htmlFor="poolType" className="form-label">Pool Type</label>
+      <div className="radio-input">
+        <label>
+          <input 
+          className="pool-type" 
+          id="public" 
+          type="radio" 
+          checked={!isPrivate}
+          value={!isPrivate}
           onChange={handleIsPrivateChange}
-        />
-        <label htmlFor="isPrivate">{isPrivate ? 'Private' : 'Public'}</label>
+          />
+          <span>Public</span>
+        </label>
+        <label>
+          <input 
+          name="pool-type" 
+          id="private" 
+          type="radio"
+          checked={isPrivate}
+          value={isPrivate}
+          onChange={handleIsPrivateChange}
+          />
+          <span>Private</span>
+        </label>
+        <span class="selection"></span>
       </div>
 
       {!isPrivate && (

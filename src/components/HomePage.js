@@ -6,9 +6,9 @@ import background from '../resources/background1.jpg'
 
 const HomePage = () => {
   return (
-    <WaterWave 
+    <WaterWave
     imageUrl={background} 
-    style={{ width: '100%', height: '100vh', backgroundSize: 'cover'}}
+    style={{ width: '100%', height: '100vh', backgroundSize: 'cover', zIndex: 1}}
     resolution={512}
     dropRadius={70}
     perturbance={0.1}
