@@ -1,6 +1,7 @@
 # Liquid
 
-Demo: https://rohandave.eth.limo/ (or run locally with npm install, npm start)
+Demo: https://liquidai.eth.limo/ (or run locally with npm install, npm start)
+Verified Scroll Sepolia Contract: https://sepolia.scrollscan.com/address/0xac8ff620b259f8a56f527c01598849a954608e74
 
 Unveiling Liquid—a cutting-edge federated learning hub! Shape dynamic collaborator pools for AI training. Safely tap into distributed data while retaining privacy. Dive into Liquid, where privacy fuels progress. 💧
 
