@@ -56,7 +56,7 @@ nav .menu{
     color: var(--yellow);
 }
 
-.menu ul li span.connected{
+.menu ul li a.connected{
     background: none;
     color: var(--yellow);
     font-size: 20px;
