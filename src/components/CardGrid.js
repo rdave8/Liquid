@@ -4,44 +4,134 @@ import '../styles/CardGrid.css';
 const data = [
     {
       id: 1,
-      name: 'Card 1',
-      model: 'Model A',
-      progress: 'Round 3 of 10',
-      contributerstatus: 'Full',
-      differentialprivacy: 'Enabled',
-      bounty: '$500',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      name: "Image Classification",
+      model: "Neural Network",
+      progress: "Round 15 of 50",
+      contributorstatus: "Full",
+      differentialprivacy: "Enabled",
+      bounty: "5 ETH",
+      description: "Train a neural network to classify images into various categories, such as animals, fruits, and vehicles."
     },
     {
-        id: 1,
-        name: 'Card 1',
-        model: 'Model A',
-        progress: 'Round 3 of 10',
-        contributerstatus: 'Full',
-        differentialprivacy: 'Enabled',
-        bounty: '$500',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      },
-      {
-        id: 1,
-        name: 'Card 1',
-        model: 'Model A',
-        progress: 'Round 3 of 10',
-        contributerstatus: 'Full',
-        differentialprivacy: 'Enabled',
-        bounty: '$500',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      },
-      {
-        id: 1,
-        name: 'Card 1',
-        model: 'Model A',
-        progress: 'Round 3 of 10',
-        contributerstatus: 'Full',
-        differentialprivacy: 'Enabled',
-        bounty: '$500',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      },
+      id: 2,
+      name: "Stock Price Prediction",
+      model: "Linear Regression",
+      progress: "Round 20 of 60",
+      contributorstatus: "Full",
+      differentialprivacy: "Disabled",
+      bounty: "8 ETH",
+      description: "Develop a linear regression model to predict stock prices based on historical data and market indicators."
+    },
+    {
+      id: 3,
+      name: "Spam Email Detection",
+      model: "Logistic Regression",
+      progress: "Round 12 of 40",
+      contributorstatus: "Full",
+      differentialprivacy: "Enabled",
+      bounty: "4.5 ETH",
+      description: "Build a logistic regression model to detect spam emails and enhance email filtering."
+    },
+    {
+      id: 4,
+      name: "Customer Churn Analysis",
+      model: "Random Forest",
+      progress: "Round 25 of 80",
+      contributorstatus: "Full",
+      differentialprivacy: "Disabled",
+      bounty: "7 ETH",
+      description: "Use a random forest model to predict customer churn and develop strategies to retain customers."
+    },
+    {
+      id: 6,
+      name: "Recommendation System",
+      model: "Neural Network",
+      progress: "Round 35 of 70",
+      contributorstatus: "Full",
+      differentialprivacy: "Enabled",
+      bounty: "7.5 ETH",
+      description: "Create a neural network-based recommendation system for movies and products to enhance user experience."
+    },
+    {
+      id: 7,
+      name: "Customer Segmentation",
+      model: "Decision Tree",
+      progress: "Round 20 of 50",
+      contributorstatus: "Full",
+      differentialprivacy: "Disabled",
+      bounty: "4 ETH",
+      description: "Utilize a decision tree model to segment customers for targeted marketing campaigns."
+    },
+    {
+      id: 8,
+      name: "Image Generation",
+      model: "Neural Network",
+      progress: "Round 45 of 90",
+      contributorstatus: "Full",
+      differentialprivacy: "Enabled",
+      bounty: "9 ETH",
+      description: "Train a neural network to generate artistic images and explore the potential of AI in art creation."
+    },
+    {
+      id: 9,
+      name: "Sentiment Analysis",
+      model: "Logistic Regression",
+      progress: "Round 35 of 70",
+      contributorstatus: "Full",
+      differentialprivacy: "Disabled",
+      bounty: "5.5 ETH",
+      description: "Develop a logistic regression model to analyze social media sentiment and gauge public opinion."
+    },
+    {
+      id: 11,
+      name: "Language Translation",
+      model: "Neural Network",
+      progress: "Round 25 of 50",
+      contributorstatus: "Full",
+      differentialprivacy: "Enabled",
+      bounty: "6.5 ETH",
+      description: "Train a neural network for language translation to break down language barriers and facilitate communication."
+    },
+    {
+      id: 12,
+      name: "Credit Risk Assessment",
+      model: "Logistic Regression",
+      progress: "Round 30 of 60",
+      contributorstatus: "Full",
+      differentialprivacy: "Disabled",
+      bounty: "5 ETH",
+      description: "Build a logistic regression model to assess credit risk and improve lending decisions."
+    },
+    {
+      id: 13,
+      name: "Object Detection",
+      model: "Neural Network",
+      progress: "Round 40 of 120",
+      contributorstatus: "Full",
+      differentialprivacy: "Enabled",
+      bounty: "7 ETH",
+      description: "Train a neural network for object detection in images and video streams to enhance security systems."
+    },
+    {
+      id: 15,
+      name: "Speech Recognition",
+      model: "Neural Network",
+      progress: "Round 30 of 60",
+      contributorstatus: "Full",
+      differentialprivacy: "Enabled",
+      bounty: "6 ETH",
+      description: "Train a neural network for speech recognition to enable voice-controlled applications."
+    },
+    {
+      id: 16,
+      name: "Stock Market Forecasting",
+      model: "Random Forest",
+      progress: "Round 35 of 70",
+      contributorstatus: "Full",
+      differentialprivacy: "Disabled",
+      bounty: "7.5 ETH",
+      description: "Develop a random forest model to forecast stock market trends and assist investors."
+    }
   ];
 
 const CardGrid = () => {
@@ -98,9 +188,9 @@ const CardGrid = () => {
             <div className="card-name">{card.name}</div>
             <div className="stat-label">Model: <span className="card-stat">{card.model}</span></div>
             <div className="stat-label">Progress: <span className="card-stat">{card.progress}</span></div>
-            <div className="stat-label">Contributer Status: <span className={card.contributerstatus === 'Full' ? 'red-text' : 'green-text'}>{card.contributerstatus}</span></div>
+            <div className="stat-label">Contributor Status: <span className={card.contributorstatus === 'Full' ? 'red-text' : 'green-text'}>{card.contributorstatus}</span></div>
             <div className="stat-label">Differential Privacy: <span className="card-stat">{card.differentialprivacy}</span></div>
-            <div className="stat-label">Bounty: <span className="card-stat">{card.bounty}</span></div>
+            <div className="stat-label">Bounty: <span className="green-text">{card.bounty}</span></div>
         </div>
         ))}
       </div>
@@ -112,12 +202,12 @@ const CardGrid = () => {
             <div className="popup-stat-label"><span className="popup-card-stat">{selectedCard.description}</span></div>
             <div className="popup-stat-label">Model: <span className="popup-card-stat">{selectedCard.model}</span></div>
             <div className="popup-stat-label">Progress: <span className="popup-card-stat">{selectedCard.progress}</span></div>
-            <div className="popup-stat-label">Contributer Status: <span className={selectedCard.contributerstatus === 'Full' ? 'red-text' : 'green-text'}>{selectedCard.contributerstatus}</span></div>
+            <div className="popup-stat-label">Contributor Status: <span className={selectedCard.contributorstatus === 'Full' ? 'red-text' : 'green-text'}>{selectedCard.contributorstatus}</span></div>
             <div className="popup-stat-label">Differential Privacy: <span className="popup-card-stat">{selectedCard.differentialprivacy}</span></div>
-            <div className="popup-stat-label">Bounty: <span className="popup-card-stat">{selectedCard.bounty}</span></div>
+            <div className="popup-stat-label">Bounty: <span className="green-text">{selectedCard.bounty}</span></div>
             <div className="button-container">
               {fileUploaded ? (
-                <button className="file-button-uploaded">Files Uploaded</button>
+                <button className="file-button-uploaded">Data Uploaded</button>
               ) : (
                 <>
                   <input
@@ -126,7 +216,7 @@ const CardGrid = () => {
                     style={{ display: 'none' }}
                     onChange={handleFileChange}
                   />
-                  <button className="file-button" onClick={handleFileUpload}>Upload Files</button>
+                  <button className="file-button" onClick={handleFileUpload}>Upload Data</button>
                 </>
               )}
               <button className="join-button" onClick={handleJoin}>Join</button>
