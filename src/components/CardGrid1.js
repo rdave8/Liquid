@@ -115,7 +115,7 @@ const CardGrid1 = () => {
                   <button className="file-button" onClick={handleFileUpload}>Upload Additional Data</button>
                 </>
               )}
-              <button className="join-button" onClick={() => write()}>Claim Rewards</button>
+              <button className="join-button" disabled={!write} onClick={() => write?.()}>Claim Rewards</button>
             </div>
           </div>
         </div>

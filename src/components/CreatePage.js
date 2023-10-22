@@ -28,7 +28,7 @@ const CreatePage = () => {
         name: 'testCreate',
         type: 'function',
         stateMutability: 'nonpayable',
-        inputs: ['0.001'],
+        inputs: [0.001],
         outputs: [],
       },
     ],
@@ -61,7 +61,7 @@ const CreatePage = () => {
     <>
       <div className="bg"></div>
       <CreatePoolForm onFormChange={handleFormChange} />
-      <CreateButton onClick={() => write()}></CreateButton>
+      <CreateButton disabled={!write} onClick={() => write?.()}></CreateButton>
     </>
   );
 };
