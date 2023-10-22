@@ -28,7 +28,7 @@ const CreatePage = () => {
         name: 'testCreate',
         type: 'function',
         stateMutability: 'nonpayable',
-        inputs: [0.001],
+        inputs: ['0.001'],
         outputs: [],
       },
     ],
