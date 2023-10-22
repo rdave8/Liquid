@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Liquid
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Demo: https://liquidai.eth.limo/ (or run locally with npm install, npm start)
+Verified Scroll Sepolia Contract: https://sepolia.scrollscan.com/address/0xac8ff620b259f8a56f527c01598849a954608e74
 
-## Available Scripts
+Unveiling Liquid—a cutting-edge federated learning hub! Shape dynamic collaborator pools for AI training. Safely tap into distributed data while retaining privacy. Dive into Liquid, where privacy fuels progress. 💧
 
-In the project directory, you can run:
+Project Description
+Introducing Liquid - Pioneering Federated Learning Hub for Collaborative AI Advancements
 
-### `npm start`
+In a world driven by data and technology, the quest for cutting-edge AI advancements faces a constant challenge – how to harness the collective power of distributed data while safeguarding individual privacy. Enter Liquid - a groundbreaking federated learning hub that is set to revolutionize the way we train AI models. This innovative platform allows users to create dynamic collaborator pools, ensuring data privacy and security are maintained throughout the process. 💧
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Shaping Collaborator Pools for AI Training
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Liquid is not just a platform; it's a gateway to a new era of collaborative AI development. Users can effortlessly create "pools," which are essentially machine learning tasks that are open for participation by anyone interested in contributing their expertise and data. When setting up a pool, users have the flexibility to specify training parameters, thus tailoring the learning experience to their exact requirements. These pools represent more than just AI projects; they signify a paradigm shift in federated learning.
 
-### `npm test`
+Securing Distributed Data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The security and privacy of data are of paramount importance, especially in the age of data breaches and privacy concerns. Liquid is designed to tackle this challenge head-on. Participants in these pools are required to sign a transaction, pledging to locally train a model using their own data. This innovative approach ensures that data remains securely on the user's device, never leaving their control or compromising their privacy. Liquid upholds the fundamental principles of federated learning, maintaining data decentralization while unlocking collaborative potential.
 
-### `npm run build`
+Incentivizing Progress
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+At the core of Liquid is the federated learning process. During each iteration or round, participants diligently send their model updates to the pool contract. In recognition of their valuable contributions, participants receive incentives and rewards. This ingenious system not only propels the development of AI models but also fosters a thriving ecosystem of data collaborators.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+User-Friendly Interface
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+User-friendliness is a cornerstone of Liquid. Users can seamlessly manage and monitor their pools via the "My Pools" page. This intuitive feature empowers users to stay informed about their contributions, track their progress, and make informed decisions throughout their AI training journey.
 
-### `npm run eject`
+Safeguarding Data, Fostering Innovation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+At the culmination of the specified number of rounds, the AI model reaches its final form, and the original creator acquires a well-trained model. Meanwhile, participants receive their hard-earned incentive rewards. The most remarkable aspect of this entire process is that no data has been compromised. Liquid is not just a platform; it's a groundbreaking solution to one of the most pressing challenges in AI development – preserving privacy while advancing innovation.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Liquid is poised to redefine the approach to federated learning, providing a secure, collaborative, and rewarding environment for AI model training. With this platform, privacy is the driving force behind progress, and data security is the bedrock of AI advancement. Dive into Liquid and become a part of this transformative journey. 🌐
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+How it's Made
+Crafting Liquid: A Dive into the Technical Depths
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Building Liquid was no small feat, and the nitty-gritty details involved a carefully orchestrated blend of technologies, partnerships, and some clever hacks to create a seamless user experience.
 
-## Learn More
+Frontend Magic with React:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The frontend of Liquid is powered by React, one of the most popular and versatile JavaScript libraries for building user interfaces. React's component-based architecture made it the ideal choice for creating the dynamic and interactive user interface. It allowed us to break down complex features into smaller, manageable components, making maintenance and updates a breeze.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Web3.js and Wagmi for Seamless Wallet Integration:
 
-### Code Splitting
+Ensuring a smooth and secure user experience with cryptocurrency transactions was a top priority for Liquid. We integrated Web3.js, a JavaScript library for interacting with Ethereum-based applications, to enable users to manage their connected wallets and handle transaction signing interactions seamlessly. Additionally, we harnessed the power of Wagmi, a robust tool that complements Web3.js, to streamline the management of these wallet interactions. This combination was pivotal in providing users with a secure and reliable way to engage with the platform.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+JQuery for the Mesmerizing Water Effect:
 
-### Analyzing the Bundle Size
+To create the captivating water effect that welcomes users on the home screen, we utilized JQuery plugins. These plugins added a touch of artistry to the user interface, creating a visually engaging and immersive experience. The result was not just a platform but a digital environment that captured users' attention and imagination.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Gas Optimization on Scroll's Sepolia Testnet:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+One of the remarkable achievements of Liquid is the optimization of gas usage. We deployed the contract used on Scroll's Sepolia testnet, a lesser-known but highly efficient blockchain testnet. This strategic choice significantly reduced the gas needed for transaction signing. By leveraging the capabilities of the Sepolia testnet, we were able to ensure that the platform remains cost-effective and efficient, making it more accessible and sustainable for users.🚀
