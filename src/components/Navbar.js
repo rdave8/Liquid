@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useWeb3Modal } from '@web3modal/wagmi/react';
 import { useAccount } from 'wagmi'
 import '../styles/Navbar.css';
@@ -32,22 +33,22 @@ const Navbar = () => {
     <nav>
       <div className="menu">
         <div className="logo">
-          <a href="/">Liquid</a>
+          <Link to="/">Liquid</Link>
         </div>
         <ul>
           <li>
-            <a href="/Join" className={currentPath === '/Join' ? 'active' : ''}>Join</a>
+            <Link to="/Join" className={currentPath === '/Join' ? 'active' : ''}>Join</Link>
           </li>
           <li>
-            <a href="/Create" className={currentPath === '/Create' ? 'active' : ''}>Create</a>
+            <Link to="/Create" className={currentPath === '/Create' ? 'active' : ''}>Create</Link>
           </li>
           <li>
-            <a href="/MyPools" className={currentPath === '/MyPools' ? 'active' : ''}>My Pools</a>
+            <Link to="/MyPools" className={currentPath === '/MyPools' ? 'active' : ''}>My Pools</Link>
           </li>
           <li>
-            <a className={`unconnected ${isConnected ? 'connected' : ''}`} href="#" onClick={connectWallet}>
+            <Link className={`unconnected ${isConnected ? 'connected' : ''}`} href="#" onClick={connectWallet}>
               {isConnected ? 'Connected' : 'Connect Wallet'}
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

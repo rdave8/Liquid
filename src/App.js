@@ -22,7 +22,7 @@ createWeb3Modal({ wagmiConfig, projectId, chains })
 const App = () => {
   return (
     <WagmiConfig config={wagmiConfig}>
-    <HashRouter>
+    <HashRouter >
       <Navbar />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
