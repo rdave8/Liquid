@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import '../styles/CreatePage.css';
 import CreatePoolForm from './CreatePoolForm';
 import CreateButton from './CreateButton';
+import {
+  usePrepareContractWrite,
+  useContractWrite,
+  useWaitForTransaction,
+} from 'wagmi'
 
 const CreatePage = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +20,21 @@ const CreatePage = () => {
     algorithm: 'NeuralNetwork',
     price: 0,
   });
+
+  const { config } = usePrepareContractWrite({
+    address: '0xac8ff620b259f8a56f527c01598849a954608e74',
+    abi: [
+      {
+        name: 'testCreate',
+        type: 'function',
+        stateMutability: 'nonpayable',
+        inputs: [formData.price],
+        outputs: [],
+      },
+    ],
+    functionName: 'testCreate',
+  })
+  const { write } = useContractWrite(config)
 
   const testForm = () => {
     alert(
@@ -41,7 +61,7 @@ const CreatePage = () => {
     <>
       <div className="bg"></div>
       <CreatePoolForm onFormChange={handleFormChange} />
-      <CreateButton onClick={testForm} />
+      <CreateButton onClick={() => write()}></CreateButton>
     </>
   );
 };

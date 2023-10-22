@@ -42,7 +42,7 @@ const Navbar = () => {
             <a href="/Create" className={currentPath === '/Create' ? 'active' : ''}>Create</a>
           </li>
           <li>
-            <a href="/LearnMore" className={currentPath === '/LearnMore' ? 'active' : ''}>Learn More</a>
+            <a href="/MyPools" className={currentPath === '/MyPools' ? 'active' : ''}>My Pools</a>
           </li>
           <li>
             <a className={`unconnected ${isConnected ? 'connected' : ''}`} href="#" onClick={connectWallet}>

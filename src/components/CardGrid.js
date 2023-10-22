@@ -1,24 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/CardGrid.css';
+import {
+  usePrepareContractWrite,
+  useContractWrite,
+  useWaitForTransaction,
+} from 'wagmi'
 
 const data = [
     {
       id: 1,
-      name: "Image Classification",
-      model: "Neural Network",
-      progress: "Round 15 of 50",
-      contributorstatus: "Full",
-      differentialprivacy: "Enabled",
-      bounty: "5 ETH",
-      description: "Train a neural network to classify images into various categories, such as animals, fruits, and vehicles."
+      name: "Rohan's Training Pool",
+      model: "Linear Regression",
+      progress: "Round 0 of 10",
+      contributorstatus: "Open",
+      differentialprivacy: "Disabled",
+      bounty: "0.0015 ETH",
+      description: "A machine learning training task utilizing linear regression to forecast disease occurrences from health data, aiming to enhance early disease detection and inform proactive healthcare interventions."
     },
     {
       id: 2,
       name: "Stock Price Prediction",
       model: "Linear Regression",
       progress: "Round 20 of 60",
-      contributorstatus: "Full",
-      differentialprivacy: "Disabled",
+      contributorstatus: "Open",
+      differentialprivacy: "Enabled",
       bounty: "8 ETH",
       description: "Develop a linear regression model to predict stock prices based on historical data and market indicators."
     },
@@ -162,9 +167,20 @@ const CardGrid = () => {
     }
   };
 
-  const handleJoin = () => {
-    // Implement your 'join' functionality here
-  };
+  const { config } = usePrepareContractWrite({
+    address: '0xac8ff620b259f8a56f527c01598849a954608e74',
+    abi: [
+      {
+        name: 'testJoin',
+        type: 'function',
+        stateMutability: 'nonpayable',
+        inputs: [0.001],
+        outputs: [],
+      },
+    ],
+    functionName: 'testCreate',
+  })
+  const { write } = useContractWrite(config)
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
@@ -219,7 +235,7 @@ const CardGrid = () => {
                   <button className="file-button" onClick={handleFileUpload}>Upload Data</button>
                 </>
               )}
-              <button className="join-button" onClick={handleJoin}>Join</button>
+              <button className="join-button" onClick={() => write()}>Join</button>
             </div>
           </div>
         </div>

@@ -13,24 +13,24 @@ const CreatePoolForm = ({ onFormChange }) => {
   const [price, setPrice] = useState(0);
 
   useEffect(() => {
-    const basePrice = 0.5;
+    const basePrice = 0.0;
 
-    let algorithmMultiplier = 0.01;
+    let algorithmMultiplier = 0.0001;
     if (algorithm === 'LogisticRegression') {
-      algorithmMultiplier = 0.0125;
+      algorithmMultiplier = 0.005;
     } else if (algorithm === 'DecisionTree') {
-      algorithmMultiplier = 0.0225;
+      algorithmMultiplier = 0.0075;
     } else if (algorithm === 'RandomForest') {
-      algorithmMultiplier = 0.05;
+      algorithmMultiplier = 0.01;
     } else if (algorithm === 'NeuralNetwork') {
-      algorithmMultiplier = 0.075;
+      algorithmMultiplier = 0.03;
     } 
 
     let totalPrice = basePrice;
     if (isPrivate) {
       totalPrice = 2*basePrice + algorithmMultiplier * 10 + 0.001*rounds;
     } else {
-      totalPrice = basePrice + algorithmMultiplier * maxContributors + 0.001*rounds;
+      totalPrice = basePrice + algorithmMultiplier * maxContributors + 0.0001*rounds;
     }
 
     if (differentialPrivacy) {
