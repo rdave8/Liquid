@@ -10,6 +10,7 @@ const CreatePage = () => {
     isPrivate: false,
     approvedAddresses: '',
     differentialPrivacy: false,
+    rounds: 0,
     maxContributors: 0,
     algorithm: 'NeuralNetwork',
     price: 0,
@@ -23,6 +24,7 @@ const CreatePage = () => {
       `Approved Addresses: ${formData.approvedAddresses}\n` +
       `Differential Privacy: ${formData.differentialPrivacy ? 'Enabled' : 'Disabled'}\n` +
       `Max Contributors: ${formData.maxContributors}\n` +
+      `Rounds: ${formData.rounds}\n` +
       `Model: ${formData.algorithm}\n` +
       `Estimated Price: $${formData.price}`
     );

@@ -7,6 +7,7 @@ const CreatePoolForm = ({ onFormChange }) => {
   const [isPrivate, setIsPrivate] = useState(false);
   const [maxContributors, setMaxContributors] = useState('');
   const [approvedAddresses, setApprovedAddresses] = useState('');
+  const [rounds, setRounds] = useState('');
   const [differentialPrivacy, setDifferentialPrivacy] = useState(false);
   const [algorithm, setAlgorithm] = useState('NeuralNetwork');
   const [price, setPrice] = useState(0);
@@ -27,9 +28,9 @@ const CreatePoolForm = ({ onFormChange }) => {
 
     let totalPrice = basePrice;
     if (isPrivate) {
-      totalPrice = 2*basePrice + algorithmMultiplier * 10;
+      totalPrice = 2*basePrice + algorithmMultiplier * 10 + 0.001*rounds;
     } else {
-      totalPrice = basePrice + algorithmMultiplier * maxContributors;
+      totalPrice = basePrice + algorithmMultiplier * maxContributors + 0.001*rounds;
     }
 
     if (differentialPrivacy) {
@@ -38,7 +39,7 @@ const CreatePoolForm = ({ onFormChange }) => {
 
     setPrice(totalPrice);
     onFormChange('price', totalPrice);
-  }, [isPrivate, maxContributors, differentialPrivacy, algorithm]);
+  }, [isPrivate, maxContributors, differentialPrivacy, algorithm, rounds]);
 
   const handlePoolNameChange = (event) => {
     const value = event.target.value;
@@ -68,6 +69,12 @@ const CreatePoolForm = ({ onFormChange }) => {
     const value = event.target.value;
     setApprovedAddresses(value);
     onFormChange('approvedAddresses', value);
+  };
+
+  const handleRoundsChange = (event) => {
+    const value = event.target.value;
+    setRounds(parseInt(value));
+    onFormChange('rounds', value);
   };
 
   const handleDifferentialPrivacyChange = () => {
@@ -133,7 +140,7 @@ const CreatePoolForm = ({ onFormChange }) => {
       </div>
 
       {!isPrivate && (
-        <div>
+        <>
           <label htmlFor="maxContributors" className="form-label">Max Contributors</label>
             <input
               type="number"
@@ -143,11 +150,11 @@ const CreatePoolForm = ({ onFormChange }) => {
               value={maxContributors}
               onChange={handleMaxContributorsChange}
           />
-        </div>
+        </>
       )}
 
       {isPrivate && (
-        <div>
+        <>
           <label htmlFor="approvedAddresses" className="form-label">Approved Addresses</label>
           <textarea
             id="approvedAddresses"
@@ -157,8 +164,18 @@ const CreatePoolForm = ({ onFormChange }) => {
             value={approvedAddresses}
             onChange={handleApprovedAddressesChange}
           ></textarea>
-        </div>
+        </>
       )}
+
+      <label htmlFor="rounds" className="form-label">Rounds</label>
+            <input
+              type="number"
+              id="rounds"
+              className="form-input"
+              placeholder="Enter Number of Rounds"
+              value={rounds}
+              onChange={handleRoundsChange}
+      />
 
       <div className="form-toggle">
         <label htmlFor="differentialPrivacy" className="form-label">Differential Privacy</label>
