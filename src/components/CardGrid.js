@@ -169,16 +169,8 @@ const CardGrid = () => {
 
   const { config } = usePrepareContractWrite({
     address: '0xac8ff620b259f8a56f527c01598849a954608e74',
-    abi: [
-      {
-        name: 'testJoin',
-        type: 'function',
-        stateMutability: 'nonpayable',
-        inputs: [0.001],
-        outputs: [],
-      },
-    ],
-    functionName: 'testCreate',
+    abi: [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[],"name":"contributeData","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"distributeRewards","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"participant","type":"address"}],"name":"getParticipantContribution","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"participant","type":"address"}],"name":"isParticipant","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"participants","outputs":[{"internalType":"uint256","name":"contribution","type":"uint256"},{"internalType":"bool","name":"hasContributed","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"roundNumber","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"reward","type":"uint256"}],"name":"startNewRound","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"testCreate","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"testJoin","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"totalReward","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"trainingInProgress","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"},{"stateMutability":"payable","type":"receive"}],
+    functionName: 'testJoin',
   })
   const { write } = useContractWrite(config)
 
